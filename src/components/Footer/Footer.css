@@ -1,0 +1,17 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 75px;
+    background-color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.footer__name{
+    color: white;
+}
+
+.footer__date {
+    color: white;
+}
+
