@@ -1,13 +1,8 @@
 import "./ModalWithForm.css";
 
-function ModalWithForm({ activeModal, children, buttonText, title, onClose, onSubmit }) {
-  //   children,
-  //   title,
-  //   buttonText,
-  //   isOpen,
-  //   onClose,
-  //   onSubmit,
-  // }) {
+import React from "react";
+
+function ModalWithForm({ activeModal, children, buttonText, title, onClose }) {
 
   return (
     <div className={`modal ${activeModal ? "modal_opened" : ""}`}>

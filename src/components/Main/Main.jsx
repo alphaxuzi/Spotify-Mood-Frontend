@@ -1,14 +1,16 @@
 import './Main.css'
-import MoodCard from '../MoodCard/MoodCard';
-import Carousel from '../Carousel/Carousel';
+import FruitCard from '../FruitCard/FruitCard';
+import FruitDisplay from '../FruitDisplay/FruitDisplay';
+import React from 'react';
 
-
-function Main({selectedMood, onMoodSelect, isAuthenticated}) {
+function Main({selectedFruit, onFruitSelect}) {
   return (
     <div className="main">
-      <h1 className="main__text"> Today I feel:</h1>
-      <MoodCard onMoodSelect={onMoodSelect} />
-      <Carousel selectedMood={selectedMood}  />
+      <h1 className="main__text"> Choose a fruit: </h1>
+      <FruitCard onFruitSelect={onFruitSelect} />
+      { selectedFruit ? (<FruitDisplay selectedFruit={selectedFruit} />) : ( null )
+  
+}
     </div>
   );
 }

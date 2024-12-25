@@ -1,5 +1,7 @@
+import './RegisterModal.css'
 import { useState } from "react";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
+import React from "react";
 
 function RegisterModal({ activeModal, onClose }) {
     const [formData, setFormData] = useState({

@@ -39,12 +39,12 @@
     position: absolute;
     top: 20px;
     right: 28px;
-    background-image: url("../../assets/close-button.svg");
+    background-image: url("../../assets/Cross.svg");
     background-position: center;
     background-color: transparent;
-    background-repeat: none;
-    width: 20px;
-    height: 20px;
+    background-repeat: no-repeat;
+    width: 5px;
+    height: 15px;
     border: none;
     cursor: pointer;
   }
@@ -69,16 +69,7 @@
     padding: 0;
   }
   
-  .modal__radio-input {
-    margin-right: 11px;
-  }
-  
-  .modal__input_wrapper {
-    margin-right: auto;
-    display: flex;
-    align-items: center;
-  }
-  
+
   .modal__submit-button {
     margin-top: 32px;
     width: 124px;

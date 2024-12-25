@@ -1,58 +1,53 @@
-import { useEffect, useState } from 'react'
-import reactLogo from '../../assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Header from '../Header/Header'
-import Main from '../Main/Main'
-import Footer from '../Footer/Footer'
-import LoginModal from '../LoginModal/LoginModal'
-import RegisterModal from '../RegisterModal/RegisterModal'
-import { authenticateSpotify } from '../../utils/SpotifyAPi'
+
+import "./App.css";
+import React from "react";
+import { useState } from "react";
+import Header from "../Header/Header";
+import Main from "../Main/Main";
+import Footer from "../Footer/Footer";
+import LoginModal from "../LoginModal/LoginModal";
+import RegisterModal from "../RegisterModal/RegisterModal";
 
 function App() {
   const [activeModal, setActiveModal] = useState("");
-  const [selectedMood, setSelectedMood] = useState("");
-  const [isAuthenticatted, setIsAuthenticated] = useState(false)
+  const [selectedFruit, setSelectedFruit] = useState(null);
+  
 
   const onClose = () => {
     setActiveModal("");
-  }
+  };
 
   const handleLoginClick = () => {
     setActiveModal("login");
-  }
+  };
 
   const handleRegisterClick = () => {
-    setActiveModal("register")
-  }
+    setActiveModal("register");
+  };
 
-  const handleMoodSelect = (mood) => {
-    setSelectedMood(mood)
-  }
-
-  useEffect(() => {
-    const token = authenticateSpotify();
-    if (token) {
-      setIsAuthenticated(true); 
-    }
-  }, []);
-
+  const handleFruitSelect = (fruit) => {
+    setSelectedFruit(fruit);
+  };
 
   return (
     <>
-      <Header handleLoginClick={handleLoginClick} handleRegisterClick={handleRegisterClick}/>
-      <Main onMoodSelect={handleMoodSelect} selectedMood={selectedMood} isAuthenticatted={isAuthenticatted} />
-      <Footer />
-      <LoginModal 
-      activeModal={activeModal === "login"}
-      onClose={onClose}
+      <Header
+        handleLoginClick={handleLoginClick}
+        handleRegisterClick={handleRegisterClick}
       />
+      <Main
+        onFruitSelect={handleFruitSelect}
+        selectedFruit={selectedFruit}
+        
+      />
+      <Footer />
+      <LoginModal activeModal={activeModal === "login"} onClose={onClose} />
       <RegisterModal
-      activeModal={activeModal === "register"}
-      onClose={onClose}
+        activeModal={activeModal === "register"}
+        onClose={onClose}
       />
     </>
-  )
+  );
 }
 
 export default App;
