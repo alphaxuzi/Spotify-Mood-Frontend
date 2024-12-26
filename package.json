@@ -1,7 +1,7 @@
 {
   "name": "hello-vite",
   "private": true,
-  "homepage": "https://alphaxuzi.io/Spotify-Mood-Frontend",
+  "homepage": "https://alphaxuzi.github.io/Spotify-Mood-Frontend",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
