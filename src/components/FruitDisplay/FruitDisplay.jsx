@@ -60,7 +60,7 @@ function FruitDisplay({ selectedFruit }) {
         {fruit ? (
           <>
             <img
-              className="fruit__display_image"
+              className="fruit__display-image"
               src={fruitImages[fruit.name]}
               alt={fruit.name}
             ></img>
