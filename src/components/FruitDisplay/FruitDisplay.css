@@ -1,0 +1,28 @@
+.fruit__display {
+  height: 350px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.fruit__display-image {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+  height: 250px;
+  width: 520px;
+  object-fit: cover;
+}
+
+.fruit__display_text {
+  color: black;
+  background-color: white;
+  margin: 0;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
