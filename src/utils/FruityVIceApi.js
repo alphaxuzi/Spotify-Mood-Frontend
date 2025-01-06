@@ -1,4 +1,7 @@
-const BASE_URL = "/api/api/fruit";
+const BASE_URL =
+  process.env.NODE_ENV === "development"
+    ? "/api/api/fruit" 
+    : "https://cors-anywhere.herokuapp.com/https://fruityvice.com/api/fruit";
 
 export const fetchFruitData = async (fruitName) => {
   try {
